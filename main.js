@@ -49,12 +49,12 @@ myApp = new Vue({
         
         //WAY 1-3
 
-        if(this.toDoList[indice].done == true){
-            this.toDoList[indice].done = false
-        }   
-        else if(this.toDoList[indice].done == false) {
-            this.toDoList[indice].done = true
-        }
+        // if(this.toDoList[indice].done == true){
+        //     this.toDoList[indice].done = false
+        // }   
+        // else if(this.toDoList[indice].done == false) {
+        //     this.toDoList[indice].done = true
+        // }
         }
     },
 })
