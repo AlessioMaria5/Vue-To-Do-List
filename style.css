@@ -35,11 +35,29 @@
 
 .list {
 
-    width: 1500px;
-
-    background-color: grey;
+    width: 500px;
     margin: auto;
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px 0px;
 }
 
+
+
+.myToDo {
+
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: black 1px solid;
+
+}
+
+.delete {
+
+    cursor: pointer;
+}
+
+.delete:hover {
+
+    color: red;
+}

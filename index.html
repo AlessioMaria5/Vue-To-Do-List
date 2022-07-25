@@ -15,15 +15,15 @@
     <main id="VueApp">
         <section class="form">
             <label for="testo">Todo</label>
-            <input @keyup.enter="pushaElemento(myObj)" v-model="myObj" id="testo" type="text" placeholder="Inserisci il tuo testo">
-            <button @click="pushaElemento(myObj)">Aggiungi</button>
+            <input @keyup.enter="pushaElemento(myDataValue)" v-model="myDataValue" id="testo" type="text" placeholder="Inserisci il tuo testo">
+            <button @click="pushaElemento(myDataValue)">Aggiungi</button>
         </section>
 
         <div class="list">
-            <ul>
-                <li v-for="(elemento, index) in toDoList" >
-                    {{toDoList[index].text}}
-                    <span @click="eliminazione(index)">ELIMINA</span>
+            <ul class="preTodo">
+                <li class="myToDo" v-for="(elemento, index) in toDoList" >
+                    <span id="doneUndone" @click="doneEvent(index)">{{toDoList[index].text}}</span>
+                    <span class="delete" @click="eliminazione(index)">X</span>
                 </li>
             </ul>
         </div>

@@ -30,9 +30,12 @@ myApp = new Vue({
         },
 
         pushaElemento(valoreTesto){
-
-          this.toDoList.push({text:valoreTesto, done: false,}); 
-          
+          this.toDoList.push({text:valoreTesto, done: false,});
         },
-    }
+
+        doneEvent(indice){
+            this.toDoList[indice].done == true?this.done=false:this.done=true;
+            console.log(this.done)
+        }
+    },
 })
