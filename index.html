@@ -22,7 +22,7 @@
         <div class="list">
             <ul class="preTodo">
                 <li class="myToDo" v-for="(elemento, index) in toDoList" >
-                    <span id="doneUndone" @click="doneEvent(index)">{{toDoList[index].text}}</span>
+                    <span :class="toDoList[index].done == true?'done':'undone'" class="" @click="doneEvent(index)">{{toDoList[index].text}}</span>
                     <span class="delete" @click="eliminazione(index)">X</span>
                 </li>
             </ul>

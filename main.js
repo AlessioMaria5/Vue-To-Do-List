@@ -34,8 +34,23 @@ myApp = new Vue({
         },
 
         doneEvent(indice){
-            this.toDoList[indice].done == true?this.done=false:this.done=true;
-            console.log(this.done)
+        //WAY 1 
+          
+        this.toDoList[indice].done = !this.toDoList[indice].done 
+         
+        // WAY 2
+
+        // this.toDoList[indice].done = (this.toDoList[indice].done == true)? false : true;
+        console.log(this.toDoList[indice].done)
+        
+        //WAY 3
+
+        // if(this.toDoList[indice].done == true){
+        //     this.toDoList[indice].done = false
+        // }   
+        // else if(this.toDoList[indice].done == false) {
+        //     this.toDoList[indice].done = true
+        // }
         }
     },
 })
